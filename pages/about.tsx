@@ -1,13 +1,7 @@
-import React, { ReactElement } from 'react'
-
 interface Props {
-    name: string
+  name: string;
 }
 
-export default function About({name="default"}: Props) {
-    return (
-        <div>
-            {name}
-        </div>
-    )
+export default function About({ name = "default" }: Props) {
+  return <div>{name}</div>;
 }
