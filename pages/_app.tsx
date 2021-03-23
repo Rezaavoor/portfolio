@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [isDark, setIsDark] = useState(true);
   return (
     <ThemeProvider theme={isDark ? theme.darkTheme : theme.lightTheme}>
-      <Layout>
+      <Layout darkState={[isDark, setIsDark]}>
         <Component {...pageProps} darkState={[isDark, setIsDark]} />
       </Layout>
     </ThemeProvider>
