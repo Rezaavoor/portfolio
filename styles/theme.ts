@@ -14,6 +14,7 @@ export default {
   darkTheme: {
     colors: {
       background: '#151515',
+      backgroundImage: 'url("/Background-Dark.svg")',
       text: '#CCCCCC',
       lightText: '#FFFFFF',
       cardBackground: '#242424',
@@ -23,8 +24,9 @@ export default {
   lightTheme: {
     colors: {
       background: '#E5E5E5',
-      text: '#151515',
-      lightText: '#242424',
+      backgroundImage: 'url("/Background-Light.svg")',
+      text: '#242424',
+      lightText: '#151515',
       cardBackground: '#CCCCCC',
     },
     ...others
