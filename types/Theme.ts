@@ -9,6 +9,7 @@ export interface ThemeType extends Theme{
         cardBackground: string;
     };
     fontWeight: {
+        bold: number;
         regular: number;
         light: number;
         extraLight: number;

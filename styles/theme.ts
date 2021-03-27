@@ -4,6 +4,7 @@ const others = {
   breakpoints,
   mq: breakpoints.map((bp) => `@media (max-width: ${bp}px)`), // media queries
   fontWeight: {
+    bold: 700,
     regular: 400,
     light: 300,
     extraLight: 200,

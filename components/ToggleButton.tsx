@@ -12,7 +12,7 @@ export default function ToggleButton({
     outerBorderColor: isDark ? "#3c1e70" : "#CCCCCC",
     outerColor: isDark ? "#242424" : "#E5E5E5",
     innerColor: isDark ? "#6E40C9" : "#151515",
-    innerTransform: isDark ? "-8px" : "21px",
+    innerTransform: isDark ? "-32px" : "-4px",
   };
 
   return (
