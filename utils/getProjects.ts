@@ -10,10 +10,13 @@ function getProject(project: string) {
   const fullPath = join(postsDirectory, `${realProject}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const {
-    data: { title, description, image, techStack },
+    data: { title, description, image, techStack, link, source },
     content,
   } = matter(fileContents);
-  return { data: { title, description, image, techStack }, content };
+  return {
+    data: { title, description, image, techStack, link, source },
+    content,
+  };
 }
 
 export default function getProjects() {

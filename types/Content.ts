@@ -4,6 +4,8 @@ export default interface ContentType {
     description: string;
     image: string;
     techStack: string;
+    link: string;
+    source: string;
   };
   content: string;
 }
