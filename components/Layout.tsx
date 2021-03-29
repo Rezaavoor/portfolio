@@ -19,7 +19,9 @@ export default function Layout({ children, darkState }: Props) {
         background-image: ${theme.colors.backgroundImage};
         background-position: center 0;
         background-size: 100% auto;
-        width: 100%;
+        background-color: ${theme.colors.background};
+        z-index: 0;
+        width: 100vw;
         overflow-x: hidden;
         color: ${theme.colors.text};
         font-weight: ${theme.fontWeight.regular};
@@ -38,6 +40,15 @@ export default function Layout({ children, darkState }: Props) {
         h2 {
           font-size: 1.3rem;
           font-weight: ${theme.fontWeight.regular};
+        }
+        ${theme.mq[2]} {
+          //768
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            font-weight: ${theme.fontWeight.regular};
+          }
         }
       `}
     >

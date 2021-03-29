@@ -17,11 +17,13 @@ export default function Navbar({ darkState: [isDark, setIsDark] }: Props) {
       return {
         backgroundColor: theme.colors.background,
         height: 70,
+        border: isDark ? 0 : 2,
       };
     else
       return {
         backgroundColor: "transparent",
         height: 80,
+        border: 0,
       };
   };
 
@@ -56,6 +58,12 @@ export default function Navbar({ darkState: [isDark, setIsDark] }: Props) {
         background-color: ${onScroll.backgroundColor};
         text-align: center;
         transition: 0.5s ease;
+        border-bottom: ${onScroll.border + "px"} ${theme.colors.cardBackground}
+          solid;
+        ${theme.mq[2]} {
+          //768
+          font-size: 0.9rem;
+        }
       `}
     >
       <div
@@ -63,13 +71,13 @@ export default function Navbar({ darkState: [isDark, setIsDark] }: Props) {
           height: 100%;
           max-width: 1500px;
           margin: auto;
-          padding: 0 50px;
+          padding: 0 30px;
           display: flex;
           align-items: center;
           justify-content: space-between;
         `}
       >
-        <Logo size="55px" />
+        <Logo size="50px" />
         <ul
           css={css`
             display: flex;
@@ -95,7 +103,7 @@ export default function Navbar({ darkState: [isDark, setIsDark] }: Props) {
           `}
         >
           <li>
-            <Link href="/">
+            <Link href="/?">
               <a>Home</a>
             </Link>
           </li>
@@ -105,7 +113,7 @@ export default function Navbar({ darkState: [isDark, setIsDark] }: Props) {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/#projects">
               <a>Projects</a>
             </Link>
           </li>

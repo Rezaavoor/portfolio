@@ -5,7 +5,7 @@ interface Props {
   name?: "twitter" | "linkedin" | "instagram" | "github" | "facebook" | "email";
 }
 
-export default function SocialLogo({ size, name }: Props) {
+export default function Logo({ size, name }: Props) {
   const theme = useTheme();
 
   const twitter = (
