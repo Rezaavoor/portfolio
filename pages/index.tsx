@@ -17,8 +17,7 @@ export default function Home({ projects }: Props) {
       <div
         css={css`
           position: absolute;
-          left: calc(50px + 15px);
-          // 50px is the padding which gets deleted while position: absolute. 15px is half size of icons
+          padding-left: calc(30px);
           top: 130px;
         `}
       >
@@ -37,11 +36,6 @@ export default function Home({ projects }: Props) {
             height: 300px;
             flex-direction: column;
             justify-content: space-between;
-            * {
-              :hover {
-                cursor: pointer;
-              }
-            }
           `}
         >
           <Logo size="30px" name="email" />
@@ -60,6 +54,14 @@ export default function Home({ projects }: Props) {
           justify-content: center;
           height: 80vh;
           margin: auto 100px;
+          ${theme.mq[1]} {
+            //900
+          }
+
+          ${theme.mq[2]} {
+            //768
+            text-align: center;
+          }
         `}
       >
         <div>
@@ -101,14 +103,34 @@ export default function Home({ projects }: Props) {
             <a href="mailto:reza.avoor@gmail.com">Get in touch</a>
           </button>
         </div>
-        <div>
-          <Image src="/Me.png" width="364px" height="638px" />
+        <div
+          css={css`
+            position: relative;
+            width: 364px;
+            height: 638px;
+            ${theme.mq[1]} {
+              //900
+              position: absolute;
+              right: 10%;
+              z-index: -1;
+              opacity: 0.2;
+            }
+            ${theme.mq[2]} {
+              //768
+              right: auto;
+              h1 {
+              }
+            }
+          `}
+        >
+          <Image src="/Me.png" layout="fill" objectFit="cover" />
         </div>
       </div>
       {/* Projects */}
       <div>
         {/* Line separator */}
         <div
+          id="projects"
           css={css`
             display: flex;
             align-items: center;
@@ -120,6 +142,10 @@ export default function Home({ projects }: Props) {
             css={css`
               width: 42%;
               border-top: ${theme.colors.text} 1px solid;
+              ${theme.mq[1]} {
+                //900
+                width: 30%;
+              }
             `}
           />
           Projects
@@ -127,6 +153,10 @@ export default function Home({ projects }: Props) {
             css={css`
               width: 42%;
               border-top: ${theme.colors.text} 1px solid;
+              ${theme.mq[1]} {
+                //900
+                width: 30%;
+              }
             `}
           />
         </div>

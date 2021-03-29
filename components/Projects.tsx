@@ -9,7 +9,7 @@ export default function Projects({ projects }: Props) {
   return (
     <div>
       {projects.map((p) => (
-        <Project project={p} />
+        <Project key={p.data.title} project={p} />
       ))}
     </div>
   );
