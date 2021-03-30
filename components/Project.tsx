@@ -18,6 +18,7 @@ export default function Project({
     <div
       css={css`
         display: flex;
+        flex-direction: row-reverse;
         position: relative;
         width: 80%;
         min-height: 200px;
@@ -27,14 +28,44 @@ export default function Project({
         overflow: hidden;
         ${theme.mq[1]} {
           //900
+          display: block;
+          text-align: center;
         }
       `}
     >
       <div
         css={css`
           flex-basis: 50%;
-          padding: 40px;
+          flex: 1;
           position: relative;
+          ${theme.mq[1]} {
+            //900
+            height: 400px;
+          }
+        `}
+      >
+        <a href={link}>
+          <Image
+            src={image}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top center"
+          />
+        </a>
+      </div>
+      <div
+        css={css`
+          flex-basis: 50%;
+          flex: 1;
+          padding: 40px;
+          ${theme.mq[1]} {
+            //900
+            font-size: 0.9rem;
+          }
+          ${theme.mq[3]} {
+            //576
+            font-size: 0.7rem;
+          }
         `}
       >
         <h2>
@@ -54,21 +85,6 @@ export default function Project({
         {techStack.split(" - ").map((stack) => (
           <p key={stack}> - {stack}</p>
         ))}
-      </div>
-      <div
-        css={css`
-          flex-basis: 50%;
-          position: relative;
-        `}
-      >
-        <a href={link}>
-          <Image
-            src={image}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top center"
-          />
-        </a>
       </div>
     </div>
   );
