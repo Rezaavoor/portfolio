@@ -56,11 +56,16 @@ export default function Home({ projects }: Props) {
           margin: auto 100px;
           ${theme.mq[1]} {
             //900
+            font-size: 0.9rem;
           }
 
           ${theme.mq[2]} {
             //768
             text-align: center;
+          }
+          ${theme.mq[3]} {
+            //576
+            font-size: 0.8rem;
           }
         `}
       >
