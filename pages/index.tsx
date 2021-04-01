@@ -32,6 +32,10 @@ export default function Home({ projects }: Props) {
             left: 15px;
             margin-bottom: 30px;
             border-left: ${theme.colors.text} 1px solid;
+            ${theme.mq[2]} {
+              //768
+              left: 10px;
+            }
           `}
         />
         <div
@@ -80,13 +84,13 @@ export default function Home({ projects }: Props) {
         <div>
           <p>Hi there! I'm</p>
           <h1>Reza Hosseini</h1>
-          <h2
+          <h3
             css={css`
               margin-top: 70px;
             `}
           >
             I’m a Software Engineer from Sweden.
-          </h2>
+          </h3>
           <p
             css={css`
               width: 90%;

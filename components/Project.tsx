@@ -64,7 +64,7 @@ export default function Project({
           }
           ${theme.mq[3]} {
             //576
-            font-size: 0.7rem;
+            font-size: 0.8rem;
           }
         `}
       >
