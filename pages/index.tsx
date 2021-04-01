@@ -32,10 +32,6 @@ export default function Home({ projects }: Props) {
             left: 15px;
             margin-bottom: 30px;
             border-left: ${theme.colors.text} 1px solid;
-            ${theme.mq[2]} {
-              //768
-              height: calc(100vh - 700px);
-            }
           `}
         />
         <div
@@ -44,6 +40,10 @@ export default function Home({ projects }: Props) {
             height: 300px;
             flex-direction: column;
             justify-content: space-between;
+            ${theme.mq[2]} {
+              //768
+              height: 230px;
+            }
           `}
         >
           <Logo size={30} name="email" />
