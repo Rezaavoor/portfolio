@@ -19,7 +19,7 @@ export default function Footer() {
       <br />
       <p>
         {"source: "}
-        <a href="https://github.com/Rezaavoor/rezaavoor.github.io">Github</a>
+        <a href="https://github.com/Rezaavoor/portfolio">Github</a>
       </p>
     </div>
   );
