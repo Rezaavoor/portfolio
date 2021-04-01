@@ -1,7 +1,7 @@
 {
-  "name": "portfolio_v2",
+  "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "http://rezaavoor.github.io/",
+  "homepage": "http://rezahosseini.vercel.app/",
   "private": true,
   "scripts": {
     "dev": "next dev",
