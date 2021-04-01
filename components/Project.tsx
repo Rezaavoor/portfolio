@@ -81,10 +81,16 @@ export default function Project({
         </h2>
         <h4>{description}</h4>
         <p>{content}</p>
-        <h3>Tech stack:</h3>
-        {techStack.split(" - ").map((stack) => (
-          <p key={stack}> - {stack}</p>
-        ))}
+        <div
+          css={css`
+            text-align: left;
+          `}
+        >
+          <h3>Tech stack:</h3>
+          {techStack.split(" - ").map((stack) => (
+            <p key={stack}> - {stack}</p>
+          ))}
+        </div>
       </div>
     </div>
   );

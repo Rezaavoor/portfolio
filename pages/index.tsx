@@ -19,6 +19,10 @@ export default function Home({ projects }: Props) {
           position: absolute;
           padding-left: calc(30px);
           top: 130px;
+          ${theme.mq[2]} {
+            //768
+            top: 100px;
+          }
         `}
       >
         <div
@@ -28,6 +32,10 @@ export default function Home({ projects }: Props) {
             left: 15px;
             margin-bottom: 30px;
             border-left: ${theme.colors.text} 1px solid;
+            ${theme.mq[2]} {
+              //768
+              height: calc(100vh - 700px);
+            }
           `}
         />
         <div
@@ -123,8 +131,6 @@ export default function Home({ projects }: Props) {
             ${theme.mq[2]} {
               //768
               right: auto;
-              h1 {
-              }
             }
           `}
         >

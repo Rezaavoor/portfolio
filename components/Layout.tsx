@@ -71,6 +71,10 @@ export default function Layout({ children, darkState }: Props) {
             max-width: 1500px;
             margin: auto;
             position: relative;
+            ${theme.mq[2]} {
+              //768
+              padding-top: 80px;
+            }
           `}
         >
           {children}
