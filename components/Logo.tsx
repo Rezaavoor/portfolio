@@ -1,7 +1,7 @@
-import { useTheme } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
 
 interface Props {
-  size: string;
+  size: number;
   name?: "twitter" | "linkedin" | "instagram" | "github" | "facebook" | "email";
 }
 
@@ -11,8 +11,17 @@ export default function Logo({ size, name }: Props) {
   const twitter = (
     <a href="https://twitter.com/rezaavoor" target="_blank">
       <svg
-        width={size}
-        height={size}
+        css={css`
+          width: ${size + "px"};
+          height: ${size + "px"};
+          ${theme.mq[2]} {
+            //768
+            width: ${size / 1.3 + "px"};
+            height: ${size / 1.3 + "px"};
+          }
+        `}
+        // width={size}
+        // height={size}
         viewBox="0 0 37 38"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +40,15 @@ export default function Logo({ size, name }: Props) {
       target="_blank"
     >
       <svg
-        width={size}
-        height={size}
+        css={css`
+          width: ${size + "px"};
+          height: ${size + "px"};
+          ${theme.mq[2]} {
+            //768
+            width: ${size / 1.3 + "px"};
+            height: ${size / 1.3 + "px"};
+          }
+        `}
         viewBox="0 0 35 35"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -49,8 +65,15 @@ export default function Logo({ size, name }: Props) {
   const instagram = (
     <a href="https://instagram.com/reza_avoor" target="_blank">
       <svg
-        width={size}
-        height={size}
+        css={css`
+          width: ${size + "px"};
+          height: ${size + "px"};
+          ${theme.mq[2]} {
+            //768
+            width: ${size / 1.3 + "px"};
+            height: ${size / 1.3 + "px"};
+          }
+        `}
         viewBox="0 0 35 36"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +90,15 @@ export default function Logo({ size, name }: Props) {
   const github = (
     <a href="https://github.com/Rezaavoor" target="_blank">
       <svg
-        width={size}
-        height={size}
+        css={css`
+          width: ${size + "px"};
+          height: ${size + "px"};
+          ${theme.mq[2]} {
+            //768
+            width: ${size / 1.3 + "px"};
+            height: ${size / 1.3 + "px"};
+          }
+        `}
         viewBox="0 0 34 34"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +127,15 @@ export default function Logo({ size, name }: Props) {
   const facebook = (
     <a href="https://www.facebook.com/reza.hosseini.1029770" target="_blank">
       <svg
-        width={size}
-        height={size}
+        css={css`
+          width: ${size + "px"};
+          height: ${size + "px"};
+          ${theme.mq[2]} {
+            //768
+            width: ${size / 1.3 + "px"};
+            height: ${size / 1.3 + "px"};
+          }
+        `}
         viewBox="0 0 41 42"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -113,8 +150,15 @@ export default function Logo({ size, name }: Props) {
   const email = (
     <a href="mailto:reza.avoor@gmail.com">
       <svg
-        width={size}
-        height={size}
+        css={css`
+          width: ${size + "px"};
+          height: ${size + "px"};
+          ${theme.mq[2]} {
+            //768
+            width: ${size / 1.3 + "px"};
+            height: ${size / 1.3 + "px"};
+          }
+        `}
         viewBox="0 0 37 38"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -130,8 +174,15 @@ export default function Logo({ size, name }: Props) {
   const myLogo = (
     <a href="/">
       <svg
-        width={size}
-        height={size}
+        css={css`
+          width: ${size + "px"};
+          height: ${size + "px"};
+          ${theme.mq[2]} {
+            //768
+            width: ${size / 1.3 + "px"};
+            height: ${size / 1.3 + "px"};
+          }
+        `}
         viewBox={"0 0 83 85"}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

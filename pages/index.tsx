@@ -46,12 +46,12 @@ export default function Home({ projects }: Props) {
             justify-content: space-between;
           `}
         >
-          <Logo size="30px" name="email" />
-          <Logo size="30px" name="facebook" />
-          <Logo size="30px" name="twitter" />
-          <Logo size="30px" name="linkedin" />
-          <Logo size="30px" name="instagram" />
-          <Logo size="30px" name="github" />
+          <Logo size={30} name="email" />
+          <Logo size={30} name="facebook" />
+          <Logo size={30} name="twitter" />
+          <Logo size={30} name="linkedin" />
+          <Logo size={30} name="instagram" />
+          <Logo size={30} name="github" />
         </div>
       </div>
       {/* Home */}

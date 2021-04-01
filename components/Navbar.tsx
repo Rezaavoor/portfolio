@@ -77,7 +77,7 @@ export default function Navbar({ darkState: [isDark, setIsDark] }: Props) {
           justify-content: space-between;
         `}
       >
-        <Logo size="50px" />
+        <Logo size={50} />
         <ul
           css={css`
             display: flex;
