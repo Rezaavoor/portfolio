@@ -6,6 +6,12 @@ import "../styles/globals.css";
 import theme from "../styles/theme";
 import NProgres from "nprogress";
 import Router from "next/router";
+import ThemeType from "../types/Theme";
+
+//add theme types
+declare module "@emotion/react" {
+  export interface Theme extends ThemeType {}
+}
 
 Router.events.on("routeChangeStart", () => NProgres.start());
 Router.events.on("routeChangeComplete", () => NProgres.done());
