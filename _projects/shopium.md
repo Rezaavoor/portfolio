@@ -11,5 +11,5 @@ link: "https://shopium.vercel.app/"
 source: "https://github.com/Rezaavoor/Shopium/"
 ---
 
-A website that gathers second hand ads from a variety of dieffernt websites.
+A website that gathers second hand ads from a variety of different websites.
 The goal is to encourage more people to buy/sell second hand by making the process easier.
