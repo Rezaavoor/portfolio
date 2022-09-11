@@ -89,7 +89,7 @@ export default function Home({ projects }: Props) {
               margin-top: 70px;
             `}
           >
-            I'm currently a Computer Science student studying at KTH university in Sweden.
+            I'm a CS student at KTH university in Sweden.
           </h3>
           <p
             css={css`
