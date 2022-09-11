@@ -89,15 +89,14 @@ export default function Home({ projects }: Props) {
               margin-top: 70px;
             `}
           >
-            I’m a Software Engineer from Sweden.
+            I'm currently a Computer Science student studying at KTH university in Sweden.
           </h3>
           <p
             css={css`
               width: 90%;
             `}
           >
-            I have experience in JavaScript, React, NodeJS, PostgreSQL, and a
-            lot more.
+            I build websites, develop apps, design landing pages and a lot more! If you're interested in knowing more, don't hesitate to contact me :)
           </p>
           <button
             css={css`
