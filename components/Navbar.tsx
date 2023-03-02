@@ -104,17 +104,17 @@ export default function Navbar({ darkState: [isDark, setIsDark] }: Props) {
         >
           <li>
             <Link href="/?">
-              <a>Home</a>
+              Home
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <a>About</a>
+              About
             </Link>
           </li>
           <li>
             <Link href="/#projects">
-              <a>Projects</a>
+              Projects
             </Link>
           </li>
         </ul>

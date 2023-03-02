@@ -137,7 +137,7 @@ export default function Home({ projects }: Props) {
             }
           `}
         >
-          <Image src="/Me.png" layout="fill" objectFit="cover" />
+          <Image src="/Me.png" fill alt={"Image of myself"} />
         </div>
       </div>
       {/* Projects */}
