@@ -47,9 +47,8 @@ export default function Project({
         <a href={link}>
           <Image
             src={image}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top center"
+            fill
+            alt="Project image"
           />
         </a>
       </div>
