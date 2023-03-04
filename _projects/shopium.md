@@ -1,6 +1,6 @@
 ---
 title: "Shopium"
-description: "Second-Hand Webshop"
+description: "Second Hand Webshop"
 image: "/projectImages/shopium.png"
 techStack: "Built in React and Nextjs
   - Styled with Emotion
