@@ -1,4 +1,5 @@
 import { css, useTheme } from "@emotion/react";
+import Logo from "./Logo";
 
 export default function Footer() {
   const theme = useTheme();
@@ -15,12 +16,21 @@ export default function Footer() {
         padding: 20px;
       `}
     >
-      <h4>Reza Hosseini 2021</h4>
+      <h4>Reza Hosseini 2023</h4>
       <br />
-      <p>
-        {"source: "}
-        <a href="https://github.com/Rezaavoor/portfolio">Github</a>
-      </p>
+      <div
+        css={css`
+          display: flex;
+          align-items: center;
+        `}
+      >
+        <p css={css``}>Source:</p>
+        <Logo
+          size={30}
+          name="github"
+          link="https://github.com/Rezaavoor/portfolio"
+        />
+      </div>
     </div>
   );
 }

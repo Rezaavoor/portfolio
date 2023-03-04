@@ -45,11 +45,7 @@ export default function Project({
         `}
       >
         <a href={link}>
-          <Image
-            src={image}
-            fill
-            alt="Project image"
-          />
+          <Image src={image} fill alt="Project image" />
         </a>
       </div>
       <div
@@ -67,17 +63,7 @@ export default function Project({
           }
         `}
       >
-        <h2>
-          {title}
-          <a
-            href={source}
-            css={css`
-              margin: 2px;
-            `}
-          >
-            🔗
-          </a>
-        </h2>
+        <h2>{title}</h2>
         <h4>{description}</h4>
         <p>{content}</p>
         <div
@@ -89,6 +75,18 @@ export default function Project({
           {techStack.split(" - ").map((stack) => (
             <p key={stack}> - {stack}</p>
           ))}
+        </div>
+        <div
+          css={css`
+            display: flex;
+            position: absolute;
+            top: 5%;
+            left: 40%;
+            align-items: center;
+          `}
+        >
+          <p css={css``}>Source:</p>
+          <Logo size={30} name="github" link={source} />
         </div>
       </div>
     </div>

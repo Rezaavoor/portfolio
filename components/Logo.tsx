@@ -3,9 +3,10 @@ import { css, useTheme } from "@emotion/react";
 interface Props {
   size: number;
   name?: "twitter" | "linkedin" | "instagram" | "github" | "facebook" | "email";
+  link?: string;
 }
 
-export default function Logo({ size, name }: Props) {
+export default function Logo({ size, name, link }: Props) {
   const theme = useTheme();
 
   const twitter = (
@@ -88,7 +89,7 @@ export default function Logo({ size, name }: Props) {
     </a>
   );
   const github = (
-    <a href="https://github.com/Rezaavoor" target="_blank">
+    <a href={link || "https://github.com/Rezaavoor"} target="_blank">
       <svg
         css={css`
           width: ${size + "px"};
