@@ -83,6 +83,13 @@ export default function Project({
             top: 5%;
             left: 40%;
             align-items: center;
+            ${theme.mq[1]} {
+              //900
+              top: unset;
+              left: unset;
+              right: 10px;
+              bottom: 0;
+            }
           `}
         >
           <p css={css``}>Source:</p>
