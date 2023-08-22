@@ -24,7 +24,6 @@ export default function Footer() {
           align-items: center;
         `}
       >
-        <p css={css``}>Source:</p>
         <Logo
           size={30}
           name="github"
