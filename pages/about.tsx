@@ -11,11 +11,12 @@ export default function About() {
         justify-content: center;
         height: 80vh;
         margin: auto 200px;
-        ${theme.mq[1]} {
+        ${theme.mq[0]} {
           //900
           font-size: 0.9rem;
-          width: 100vw;
+          height: 100%;
           margin: 0;
+          flex-direction: column;
         }
 
         ${theme.mq[2]} {
@@ -35,13 +36,9 @@ export default function About() {
           height: 358px;
           ${theme.mq[1]} {
             //900
-            position: absolute;
-            z-index: -1;
-            opacity: 0.5;
-          }
-          ${theme.mq[2]} {
-            //768
-            left: auto;
+            //position: absolute;
+            //z-index: -1;
+            //opacity: 0.5;
           }
         `}
       >
@@ -67,7 +64,7 @@ export default function About() {
           >
             KTH University
           </b>{" "}
-          in Sweden. I am currently (March 2023) studying my second year in
+          in Sweden. I am currently (August 2023) studying my third year in
           college and if everything goes smoothly I will be graduating in summer
           2026!
         </h3>
@@ -86,7 +83,8 @@ export default function About() {
           >
             child
           </b>
-          , I was always interested in computers and wanted to how they work.
+          , I was always interested in computers and wanted to know how they
+          work.
         </p>
         <p>
           Before I started college, I was a{" "}
@@ -125,6 +123,11 @@ export default function About() {
           </b>{" "}
           . At that time I realized this is more than just a hobby and I started
           to learn more professionally.
+        </p>
+        <p>
+          If you want to contact me, you are more than welcome to do so by
+          sending me an email at {"reza.avoor@gmail.com"} or messaging me on any
+          of my social media accounts :)
         </p>
       </div>
     </div>
