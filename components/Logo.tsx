@@ -2,15 +2,70 @@ import { css, useTheme } from "@emotion/react";
 
 interface Props {
   size: number;
-  name?: "twitter" | "linkedin" | "instagram" | "github" | "facebook" | "email";
+  name?:
+    | "twitter"
+    | "linkedin"
+    | "instagram"
+    | "github"
+    | "facebook"
+    | "email"
+    | "website";
   link?: string;
 }
 
 export default function Logo({ size, name, link }: Props) {
   const theme = useTheme();
 
+  const website = (
+    <a
+      href={link || "https://rezaa.vercel.app/"}
+      target="_blank"
+      css={css`
+        width: ${size + "px"};
+        height: ${size + "px"};
+        ${theme.mq[2]} {
+          //768
+          width: ${size / 1.3 + "px"};
+          height: ${size / 1.3 + "px"};
+        }
+      `}
+    >
+      <svg
+        css={css`
+          width: ${size + "px"};
+          height: ${size + "px"};
+          ${theme.mq[2]} {
+            //768
+            width: ${size / 1.3 + "px"};
+            height: ${size / 1.3 + "px"};
+          }
+        `}
+        viewBox="0 0 34 34"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M30.2222 0C31.2242 0 32.185 0.447766 32.8935 1.2448C33.602 2.04183 34 3.12283 34 4.25V29.75C34 30.8772 33.602 31.9582 32.8935 32.7552C32.185 33.5522 31.2242 34 30.2222 34H3.77778C2.77585 34 1.81496 33.5522 1.10649 32.7552C0.398015 31.9582 0 30.8772 0 29.75V4.25C0 3.12283 0.398015 2.04183 1.10649 1.2448C1.81496 0.447766 2.77585 0 3.77778 0H30.2222ZM30.2222 17H3.77778V29.75H30.2222V17ZM30.2222 4.25H3.77778V12.75H30.2222V4.25ZM7.55556 6.375C8.05652 6.375 8.53697 6.59888 8.8912 6.9974C9.24544 7.39591 9.44444 7.93641 9.44444 8.5C9.44444 9.06359 9.24544 9.60409 8.8912 10.0026C8.53697 10.4011 8.05652 10.625 7.55556 10.625C7.05459 10.625 6.57414 10.4011 6.21991 10.0026C5.86567 9.60409 5.66667 9.06359 5.66667 8.5C5.66667 7.93641 5.86567 7.39591 6.21991 6.9974C6.57414 6.59888 7.05459 6.375 7.55556 6.375ZM13.2222 6.375C13.7232 6.375 14.2036 6.59888 14.5579 6.9974C14.9121 7.39591 15.1111 7.93641 15.1111 8.5C15.1111 9.06359 14.9121 9.60409 14.5579 10.0026C14.2036 10.4011 13.7232 10.625 13.2222 10.625C12.7213 10.625 12.2408 10.4011 11.8866 10.0026C11.5323 9.60409 11.3333 9.06359 11.3333 8.5C11.3333 7.93641 11.5323 7.39591 11.8866 6.9974C12.2408 6.59888 12.7213 6.375 13.2222 6.375ZM18.8889 6.375C19.3899 6.375 19.8703 6.59888 20.2245 6.9974C20.5788 7.39591 20.7778 7.93641 20.7778 8.5C20.7778 9.06359 20.5788 9.60409 20.2245 10.0026C19.8703 10.4011 19.3899 10.625 18.8889 10.625C18.3879 10.625 17.9075 10.4011 17.5532 10.0026C17.199 9.60409 17 9.06359 17 8.5C17 7.93641 17.199 7.39591 17.5532 6.9974C17.9075 6.59888 18.3879 6.375 18.8889 6.375Z"
+          fill={theme.colors.text}
+        />
+      </svg>
+    </a>
+  );
+
   const twitter = (
-    <a href="https://twitter.com/rezaavoor" target="_blank">
+    <a
+      href="https://twitter.com/rezaavoor"
+      target="_blank"
+      css={css`
+        width: ${size + "px"};
+        height: ${size + "px"};
+        ${theme.mq[2]} {
+          //768
+          width: ${size / 1.3 + "px"};
+          height: ${size / 1.3 + "px"};
+        }
+      `}
+    >
       <svg
         css={css`
           width: ${size + "px"};
@@ -39,6 +94,15 @@ export default function Logo({ size, name, link }: Props) {
     <a
       href="https://www.linkedin.com/in/reza-hosseini-9a3959187/"
       target="_blank"
+      css={css`
+        width: ${size + "px"};
+        height: ${size + "px"};
+        ${theme.mq[2]} {
+          //768
+          width: ${size / 1.3 + "px"};
+          height: ${size / 1.3 + "px"};
+        }
+      `}
     >
       <svg
         css={css`
@@ -64,7 +128,19 @@ export default function Logo({ size, name, link }: Props) {
     </a>
   );
   const instagram = (
-    <a href="https://instagram.com/reza_avoor" target="_blank">
+    <a
+      href="https://instagram.com/reza_avoor"
+      target="_blank"
+      css={css`
+        width: ${size + "px"};
+        height: ${size + "px"};
+        ${theme.mq[2]} {
+          //768
+          width: ${size / 1.3 + "px"};
+          height: ${size / 1.3 + "px"};
+        }
+      `}
+    >
       <svg
         css={css`
           width: ${size + "px"};
@@ -89,7 +165,19 @@ export default function Logo({ size, name, link }: Props) {
     </a>
   );
   const github = (
-    <a href={link || "https://github.com/Rezaavoor"} target="_blank">
+    <a
+      href={link || "https://github.com/Rezaavoor"}
+      target="_blank"
+      css={css`
+        width: ${size + "px"};
+        height: ${size + "px"};
+        ${theme.mq[2]} {
+          //768
+          width: ${size / 1.3 + "px"};
+          height: ${size / 1.3 + "px"};
+        }
+      `}
+    >
       <svg
         css={css`
           width: ${size + "px"};
@@ -126,7 +214,19 @@ export default function Logo({ size, name, link }: Props) {
     </a>
   );
   const facebook = (
-    <a href="https://www.facebook.com/reza.hosseini.1029770" target="_blank">
+    <a
+      href="https://www.facebook.com/reza.hosseini.1029770"
+      target="_blank"
+      css={css`
+        width: ${size + "px"};
+        height: ${size + "px"};
+        ${theme.mq[2]} {
+          //768
+          width: ${size / 1.3 + "px"};
+          height: ${size / 1.3 + "px"};
+        }
+      `}
+    >
       <svg
         css={css`
           width: ${size + "px"};
@@ -149,7 +249,18 @@ export default function Logo({ size, name, link }: Props) {
     </a>
   );
   const email = (
-    <a href="mailto:reza.avoor@gmail.com">
+    <a
+      href="mailto:reza.avoor@gmail.com"
+      css={css`
+        width: ${size + "px"};
+        height: ${size + "px"};
+        ${theme.mq[2]} {
+          //768
+          width: ${size / 1.3 + "px"};
+          height: ${size / 1.3 + "px"};
+        }
+      `}
+    >
       <svg
         css={css`
           width: ${size + "px"};
@@ -227,6 +338,8 @@ export default function Logo({ size, name, link }: Props) {
       return facebook;
     case "email":
       return email;
+    case "website":
+      return website;
 
     default:
       return myLogo;

@@ -26,8 +26,8 @@ export default function Project({
         border-radius: 10px;
         margin: 50px auto;
         overflow: hidden;
-        ${theme.mq[1]} {
-          //900
+        ${theme.mq[0]} {
+          //1050
           display: block;
           text-align: center;
         }
@@ -38,15 +38,27 @@ export default function Project({
           flex-basis: 50%;
           flex: 1;
           position: relative;
-          ${theme.mq[1]} {
-            //900
+          display: flex;
+          justify-content: center;
+          ${theme.mq[0]} {
+            //1050
             height: 400px;
           }
         `}
       >
-        <a href={link}>
-          <Image src={image} fill alt="Project image" />
-        </a>
+        <Image
+          src={image}
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{
+            width: "auto",
+            height: "100%",
+            margin: "auto",
+            borderRadius: "10px",
+          }}
+          alt="Project image"
+        />
       </div>
       <div
         css={css`
@@ -63,7 +75,36 @@ export default function Project({
           }
         `}
       >
-        <h2>{title}</h2>
+        <div
+          css={css`
+            display: flex;
+            ${theme.mq[0]} {
+              justify-content: center;
+            }
+          `}
+        >
+          <h2
+            css={css`
+              margin-right: 20px;
+            `}
+          >
+            {title}
+          </h2>
+          <div
+            css={css`
+              margin: auto 0;
+              width: 80px;
+              display: flex;
+              justify-content: space-evenly;
+              ${theme.mq[0]} {
+                //1050
+              }
+            `}
+          >
+            <Logo size={20} name="github" link={source} />
+            <Logo size={20} name="website" link={link} />
+          </div>
+        </div>
         <h4>{description}</h4>
         <p>{content}</p>
         <div
@@ -71,7 +112,7 @@ export default function Project({
             text-align: left;
           `}
         >
-          <h3>Tech stack:</h3>
+          <h5>Tech stack:</h5>
           {techStack.split(" - ").map((stack) => (
             <p key={stack}> - {stack}</p>
           ))}
@@ -81,7 +122,7 @@ export default function Project({
             display: flex;
             position: absolute;
             top: 5%;
-            left: 40%;
+            left: 35%;
             align-items: center;
             ${theme.mq[1]} {
               //900
@@ -91,10 +132,7 @@ export default function Project({
               bottom: 0;
             }
           `}
-        >
-          <p css={css``}>Source:</p>
-          <Logo size={30} name="github" link={source} />
-        </div>
+        ></div>
       </div>
     </div>
   );
