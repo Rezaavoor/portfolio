@@ -48,8 +48,8 @@ export default function Project({
       >
         <Image
           src={image}
-          width={0}
-          height={0}
+          width="0"
+          height="0"
           sizes="100vw"
           style={{
             width: "auto",

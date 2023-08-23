@@ -96,7 +96,8 @@ export default function Home({ projects }: Props) {
               width: 90%;
             `}
           >
-            I build/design websites, apps and a lot more! If you're interested, don't hesitate to contact me :)
+            I build/design websites, apps and a lot more! If you're interested,
+            don't hesitate to contact me :)
           </p>
           <button
             css={css`
@@ -137,7 +138,18 @@ export default function Home({ projects }: Props) {
             }
           `}
         >
-          <Image src="/Me.png" fill alt={"Image of myself"} />
+          <Image
+            src="/Me.png"
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{
+              width: "auto",
+              height: "100%",
+              margin: "auto",
+            }}
+            alt={"Image of myself"}
+          />
         </div>
       </div>
       {/* Projects */}

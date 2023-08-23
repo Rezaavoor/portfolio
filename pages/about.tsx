@@ -9,12 +9,12 @@ export default function About() {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 80vh;
-        margin: auto 200px;
+        //height: 80vh;
+        margin: auto;
         ${theme.mq[0]} {
           //900
           font-size: 0.9rem;
-          height: 100%;
+          //height: 100%;
           margin: 0;
           flex-direction: column;
         }
@@ -34,15 +34,19 @@ export default function About() {
           position: relative;
           width: 300px;
           height: 358px;
-          ${theme.mq[1]} {
-            //900
-            //position: absolute;
-            //z-index: -1;
-            //opacity: 0.5;
-          }
         `}
       >
-        <Image src="/Me2.png" fill alt={"Image of myself 2"} />
+        <Image
+          src="/Me2.png"
+          width="0"
+          height="0"
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          alt={"Image of myself 2"}
+        />
       </div>
       <div
         css={css`
