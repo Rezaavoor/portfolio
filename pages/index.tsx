@@ -46,13 +46,12 @@ export default function Home({ projects }: Props) {
             justify-content: space-between;
             ${theme.mq[2]} {
               //768
-              height: 230px;
+              height: 200px;
             }
           `}
         >
           <Logo size={30} name="email" />
           <Logo size={30} name="facebook" />
-          <Logo size={30} name="twitter" />
           <Logo size={30} name="linkedin" />
           <Logo size={30} name="instagram" />
           <Logo size={30} name="github" />
@@ -153,41 +152,65 @@ export default function Home({ projects }: Props) {
         </div>
       </div>
       {/* Projects */}
-      <div>
-        {/* Line separator */}
-        <div
-          id="projects"
-          css={css`
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 200px;
-          `}
-        >
-          <div
-            css={css`
-              width: 42%;
-              border-top: ${theme.colors.text} 1px solid;
-              ${theme.mq[1]} {
-                //900
-                width: 30%;
-              }
-            `}
-          />
-          Projects
-          <div
-            css={css`
-              width: 42%;
-              border-top: ${theme.colors.text} 1px solid;
-              ${theme.mq[1]} {
-                //900
-                width: 30%;
-              }
-            `}
-          />
-        </div>
-        <Projects projects={projects} />
-      </div>
+<div
+  css={css`
+    margin-top: 200px;
+  `}
+>
+  {/* Line separator */}
+  <div
+    id="projects"
+    css={css`
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    `}
+  >
+    <div
+      css={css`
+        width: 42%;
+        border-top: ${theme.colors.text} 1px solid;
+        ${theme.mq[1]} {
+          //900
+          width: 30%;
+        }
+      `}
+    />
+    Projects
+    <div
+      css={css`
+        width: 42%;
+        border-top: ${theme.colors.text} 1px solid;
+        ${theme.mq[1]} {
+          //900
+          width: 30%;
+        }
+      `}
+    />
+  </div>
+
+  {/* Container for Projects with restricted width and padding */}
+  <div
+    css={css`
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      ${theme.mq[2]} {
+        //768 and below
+        padding: 0 15px;
+      }
+
+      ${theme.mq[3]} {
+        //576 and below
+        padding: 0 10px;
+      }
+    `}
+  >
+    <Projects projects={projects} />
+  </div>
+</div>
     </div>
   );
 }

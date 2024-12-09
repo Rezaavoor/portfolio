@@ -40,22 +40,21 @@ export default function Project({
           position: relative;
           display: flex;
           justify-content: center;
+          margin: 50px;
           ${theme.mq[0]} {
             //1050
-            height: 400px;
+            height: 300px;
           }
         `}
       >
         <Image
           src={image}
-          width="0"
-          height="0"
-          sizes="100vw"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
-            width: "auto",
-            height: "100%",
             margin: "auto",
             borderRadius: "10px",
+            
           }}
           alt="Project image"
         />
