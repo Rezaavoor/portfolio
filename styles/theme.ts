@@ -2,7 +2,7 @@ const breakpoints = [1050, 900, 768, 576];
 
 const others = {
   breakpoints,
-  mq: breakpoints.map((bp) => `@media (max-width: ${bp}px)`), // media queries
+  mq: breakpoints.map((bp) => `@media (max-width: ${bp}px)`),
   fontWeight: {
     bold: 700,
     regular: 400,
@@ -19,6 +19,9 @@ export default {
       text: "#CCCCCC",
       lightText: "#FFFFFF",
       cardBackground: "#242424",
+      accent: "#6E40C9",
+      accentHover: "#7C52D3",
+      border: "#333333",
     },
     ...others,
   },
@@ -29,6 +32,9 @@ export default {
       text: "#242424",
       lightText: "#151515",
       cardBackground: "#DDD",
+      accent: "#5B32A8",
+      accentHover: "#4A2890",
+      border: "#C0C0C0",
     },
     ...others,
   },

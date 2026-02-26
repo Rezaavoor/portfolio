@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
 
 interface Props {
@@ -8,26 +8,39 @@ interface Props {
 export default function ToggleButton({
   darkState: [isDark, setIsDark],
 }: Props) {
+  const theme = useTheme();
+
   const styles = {
-    outerBorderColor: isDark ? "#3c1e70" : "#CCCCCC",
-    outerColor: isDark ? "#242424" : "#E5E5E5",
-    innerColor: isDark ? "#6E40C9" : "#151515",
+    outerBorderColor: isDark ? theme.colors.accent : theme.colors.border,
+    outerColor: isDark ? theme.colors.cardBackground : theme.colors.background,
+    innerColor: isDark ? theme.colors.accent : theme.colors.lightText,
     innerTransform: isDark ? "-32px" : "-4px",
   };
 
   return (
     <div
+      role="button"
+      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      tabIndex={0}
+      onClick={() => setIsDark(!isDark)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setIsDark(!isDark);
+        }
+      }}
       css={css`
         width: 58px;
         height: 26px;
-        border: 4px solid ${styles.outerBorderColor};
+        border: 3px solid ${styles.outerBorderColor};
         border-radius: 17.5px;
         background-color: ${styles.outerColor};
         position: relative;
+        cursor: pointer;
+        transition: border-color 0.2s, background-color 0.2s;
       `}
     >
       <svg
-        onClick={() => setIsDark(!isDark)}
         width="36"
         height="36"
         viewBox="0 0 36 36"
@@ -35,9 +48,9 @@ export default function ToggleButton({
         xmlns="http://www.w3.org/2000/svg"
         css={css`
           position: absolute;
-          top: -9px;
-          cursor: pointer;
-          transition: all 0.2s ease-out;
+          top: -8px;
+          pointer-events: none;
+          transition: transform 0.2s ease-out;
           transform: translateX(${styles.innerTransform});
           border-radius: 50%;
         `}

@@ -1,138 +1,83 @@
 import { css, useTheme } from "@emotion/react";
 import Image from "next/image";
+import Link from "next/link";
 import ContentType from "../types/Content";
-import Logo from "../components/Logo";
 
 interface Props {
   project: ContentType;
 }
 
-export default function Project({
-  project: {
-    data: { description, image, title, techStack, link, source },
-    content,
-  },
-}: Props) {
+export default function Project({ project }: Props) {
   const theme = useTheme();
+  const { title, description, image, slug } = project.data;
+
   return (
-    <div
+    <Link
+      href={`/projects/${slug}`}
       css={css`
-        display: flex;
-        flex-direction: row-reverse;
-        position: relative;
-        width: 80%;
-        min-height: 200px;
+        display: block;
         background-color: ${theme.colors.cardBackground};
         border-radius: 10px;
-        margin: 50px auto;
         overflow: hidden;
-        ${theme.mq[0]} {
-          //1050
-          display: block;
-          text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+        }
+        &:hover img {
+          transform: scale(1.03);
         }
       `}
     >
       <div
         css={css`
-          flex-basis: 50%;
-          flex: 1;
           position: relative;
-          display: flex;
-          justify-content: center;
-          margin: 50px;
-          ${theme.mq[0]} {
-            //1050
-            height: 300px;
-          }
+          width: 100%;
+          aspect-ratio: 16 / 10;
+          overflow: hidden;
         `}
       >
         <Image
           src={image}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 576px) 85vw, (max-width: 768px) 80vw, (max-width: 1050px) 45vw, 400px"
           style={{
-            margin: "auto",
-            borderRadius: "10px",
-            
+            objectFit: "cover",
+            transition: "transform 0.3s ease",
           }}
-          alt="Project image"
+          alt={`Screenshot of ${title}`}
         />
       </div>
       <div
         css={css`
-          flex-basis: 50%;
-          flex: 1;
-          padding: 40px;
-          ${theme.mq[1]} {
-            //900
-            font-size: 0.9rem;
-          }
-          ${theme.mq[3]} {
-            //576
-            font-size: 0.8rem;
-          }
+          padding: 16px 20px 20px;
         `}
       >
-        <div
+        <h3
           css={css`
-            display: flex;
-            ${theme.mq[0]} {
-              justify-content: center;
-            }
+            margin: 0 0 6px;
+            font-size: 1rem;
+            font-weight: ${theme.fontWeight.bold};
+            color: ${theme.colors.lightText};
           `}
         >
-          <h2
-            css={css`
-              margin-right: 20px;
-            `}
-          >
-            {title}
-          </h2>
-          <div
-            css={css`
-              margin: auto 0;
-              width: 80px;
-              display: flex;
-              justify-content: space-evenly;
-              ${theme.mq[0]} {
-                //1050
-              }
-            `}
-          >
-            <Logo size={20} name="github" link={source} />
-            <Logo size={20} name="website" link={link} />
-          </div>
-        </div>
-        <h4>{description}</h4>
-        <p>{content}</p>
-        <div
+          {title}
+        </h3>
+        <p
           css={css`
-            text-align: left;
+            margin: 0;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: ${theme.colors.text};
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           `}
         >
-          <h5>Tech stack:</h5>
-          {techStack.split(" - ").map((stack) => (
-            <p key={stack}> - {stack}</p>
-          ))}
-        </div>
-        <div
-          css={css`
-            display: flex;
-            position: absolute;
-            top: 5%;
-            left: 35%;
-            align-items: center;
-            ${theme.mq[1]} {
-              //900
-              top: unset;
-              left: unset;
-              right: 10px;
-              bottom: 0;
-            }
-          `}
-        ></div>
+          {description}
+        </p>
       </div>
-    </div>
+    </Link>
   );
 }

@@ -5,6 +5,9 @@ export default interface ThemeType {
     text: string;
     lightText: string;
     cardBackground: string;
+    accent: string;
+    accentHover: string;
+    border: string;
   };
   fontWeight: {
     bold: number;

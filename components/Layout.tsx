@@ -1,4 +1,4 @@
-import { css, useTheme } from "@emotion/react";
+import { css, Global, useTheme } from "@emotion/react";
 import { Dispatch, ReactElement, SetStateAction } from "react";
 import Head from "next/head";
 import Navbar from "./Navbar";
@@ -30,6 +30,7 @@ export default function Layout({ children, darkState }: Props) {
         transition-property: background-color, color;
         p {
           font-weight: ${theme.fontWeight.light};
+          line-height: 1.7;
         }
         h1 {
           margin: 0;
@@ -42,7 +43,6 @@ export default function Layout({ children, darkState }: Props) {
           font-weight: ${theme.fontWeight.regular};
         }
         ${theme.mq[2]} {
-          //768
           h1 {
             font-size: 2rem;
           }
@@ -52,9 +52,44 @@ export default function Layout({ children, darkState }: Props) {
         }
       `}
     >
+      <Global
+        styles={css`
+          ::-webkit-scrollbar {
+            width: 6px;
+            height: 0;
+            background: ${theme.colors.background};
+          }
+          ::-webkit-scrollbar-thumb {
+            background: ${theme.colors.text};
+            border-radius: 3px;
+          }
+          #nprogress .bar {
+            background: ${theme.colors.accent};
+          }
+          #nprogress .peg {
+            box-shadow: 0 0 10px ${theme.colors.accent},
+              0 0 5px ${theme.colors.accent};
+          }
+          :focus-visible {
+            outline: 2px solid ${theme.colors.accent};
+            outline-offset: 2px;
+          }
+        `}
+      />
       <div>
         <Head>
           <title>Reza Hosseini</title>
+          <meta
+            name="description"
+            content="Portfolio of Reza Hosseini — CS student at KTH, web developer and designer."
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:title" content="Reza Hosseini — Portfolio" />
+          <meta
+            property="og:description"
+            content="CS student at KTH. I build and design websites, apps and more."
+          />
+          <meta property="og:type" content="website" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -72,7 +107,6 @@ export default function Layout({ children, darkState }: Props) {
             margin: auto;
             position: relative;
             ${theme.mq[2]} {
-              //768
               padding-top: 80px;
             }
           `}

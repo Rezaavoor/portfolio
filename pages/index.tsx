@@ -13,204 +13,244 @@ export default function Home({ projects }: Props) {
   const theme = useTheme();
   return (
     <div>
-      {/* socials */}
+      {/* Social sidebar — fixed, only on homepage */}
       <div
         css={css`
-          position: absolute;
-          padding-left: calc(30px);
-          top: 130px;
+          position: fixed;
+          left: 28px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
+          z-index: 50;
+          ${theme.mq[1]} {
+            left: 16px;
+            gap: 14px;
+          }
           ${theme.mq[2]} {
-            //768
-            top: 100px;
+            display: none;
           }
         `}
       >
         <div
           css={css`
-            height: calc(100vh - 500px);
-            position: relative;
-            left: 15px;
-            margin-bottom: 30px;
-            border-left: ${theme.colors.text} 1px solid;
-            ${theme.mq[2]} {
-              //768
-              left: 10px;
-            }
+            width: 1px;
+            height: 60px;
+            background: ${theme.colors.text};
+            opacity: 0.4;
           `}
         />
+        <Logo size={22} name="email" />
+        <Logo size={22} name="facebook" />
+        <Logo size={22} name="linkedin" />
+        <Logo size={22} name="instagram" />
+        <Logo size={22} name="github" />
         <div
           css={css`
-            display: flex;
-            height: 300px;
-            flex-direction: column;
-            justify-content: space-between;
-            ${theme.mq[2]} {
-              //768
-              height: 200px;
-            }
+            width: 1px;
+            height: 60px;
+            background: ${theme.colors.text};
+            opacity: 0.4;
           `}
-        >
-          <Logo size={30} name="email" />
-          <Logo size={30} name="facebook" />
-          <Logo size={30} name="linkedin" />
-          <Logo size={30} name="instagram" />
-          <Logo size={30} name="github" />
-        </div>
+        />
       </div>
-      {/* Home */}
+
+      {/* Hero */}
       <div
         css={css`
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 80vh;
-          margin: auto 100px;
+          min-height: 80vh;
+          padding: 0 100px;
+          gap: 60px;
           ${theme.mq[1]} {
-            //900
-            font-size: 0.9rem;
+            padding: 0 60px;
+            gap: 40px;
           }
-
           ${theme.mq[2]} {
-            //768
             text-align: center;
+            flex-direction: column-reverse;
+            padding: 0 24px;
+            gap: 24px;
+            min-height: 70vh;
           }
           ${theme.mq[3]} {
-            //576
-            font-size: 0.8rem;
+            padding: 0 20px;
           }
         `}
       >
-        <div>
-          <p>Hi there! I'm</p>
-          <h1>Reza Hosseini</h1>
-          <h3
+        <div
+          css={css`
+            flex: 1;
+            max-width: 540px;
+          `}
+        >
+          <p
             css={css`
-              margin-top: 70px;
+              font-size: 0.9rem;
+              margin-bottom: 4px;
+              ${theme.mq[2]} {
+                font-size: 0.85rem;
+              }
+            `}
+          >
+            Hi there! I'm
+          </p>
+          <h1
+            css={css`
+              ${theme.mq[3]} {
+                font-size: 1.8rem;
+              }
+            `}
+          >
+            Reza Hosseini
+          </h1>
+          <p
+            css={css`
+              margin-top: 36px;
+              font-size: 0.95rem;
+              font-weight: ${theme.fontWeight.regular};
+              ${theme.mq[2]} {
+                font-size: 0.85rem;
+                margin-top: 24px;
+              }
             `}
           >
             I'm a CS student at KTH from Sweden.
-          </h3>
+          </p>
           <p
             css={css`
-              width: 90%;
+              font-size: 0.85rem;
+              max-width: 90%;
+              ${theme.mq[2]} {
+                max-width: 100%;
+                font-size: 0.8rem;
+              }
             `}
           >
             I build/design websites, apps and a lot more! If you're interested,
             don't hesitate to contact me :)
           </p>
-          <button
+          <a
+            href="mailto:reza.avoor@gmail.com"
             css={css`
-              background-color: ${theme.colors.text};
+              display: inline-block;
+              background-color: ${theme.colors.accent};
               border: none;
-              color: ${theme.colors.background};
-              padding: 10px 10px;
-              text-align: center;
+              color: #ffffff;
+              padding: 10px 22px;
               text-decoration: none;
               font-weight: ${theme.fontWeight.bold};
-              word-spacing: 4px;
-              border-radius: 5px;
-              margin-top: 20px;
+              font-size: 0.8rem;
+              letter-spacing: 0.3px;
+              border-radius: 6px;
+              margin-top: 16px;
               cursor: pointer;
-              :hover {
-                background-color: ${theme.colors.lightText};
+              transition: background-color 0.2s ease, transform 0.2s ease;
+              &:hover {
+                background-color: ${theme.colors.accentHover};
+                transform: translateY(-1px);
+              }
+              &:active {
+                transform: translateY(0);
               }
             `}
           >
-            <a href="mailto:reza.avoor@gmail.com">Get in touch</a>
-          </button>
+            Get in touch
+          </a>
         </div>
         <div
           css={css`
             position: relative;
-            width: 364px;
-            height: 638px;
+            width: 300px;
+            height: 530px;
+            flex-shrink: 0;
             ${theme.mq[1]} {
-              //900
-              position: absolute;
-              right: 10%;
-              z-index: -1;
-              opacity: 0.2;
+              width: 240px;
+              height: 420px;
             }
             ${theme.mq[2]} {
-              //768
-              right: auto;
+              width: 160px;
+              height: 280px;
+              opacity: 0.7;
             }
           `}
         >
           <Image
             src="/Me.png"
-            width="0"
-            height="0"
-            sizes="100vw"
+            fill
+            sizes="(max-width: 768px) 160px, (max-width: 900px) 240px, 300px"
             style={{
-              width: "auto",
-              height: "100%",
-              margin: "auto",
+              objectFit: "contain",
             }}
-            alt={"Image of myself"}
+            alt="Image of myself"
+            priority
           />
         </div>
       </div>
+
       {/* Projects */}
-<div
-  css={css`
-    margin-top: 200px;
-  `}
->
-  {/* Line separator */}
-  <div
-    id="projects"
-    css={css`
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 40px;
-    `}
-  >
-    <div
-      css={css`
-        width: 42%;
-        border-top: ${theme.colors.text} 1px solid;
-        ${theme.mq[1]} {
-          //900
-          width: 30%;
-        }
-      `}
-    />
-    Projects
-    <div
-      css={css`
-        width: 42%;
-        border-top: ${theme.colors.text} 1px solid;
-        ${theme.mq[1]} {
-          //900
-          width: 30%;
-        }
-      `}
-    />
-  </div>
+      <div
+        css={css`
+          margin-top: 100px;
+          padding: 0 40px;
+          ${theme.mq[2]} {
+            padding: 0 20px;
+            margin-top: 60px;
+          }
+        `}
+      >
+        <div
+          id="projects"
+          css={css`
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            scroll-margin-top: 100px;
+          `}
+        >
+          <div
+            css={css`
+              flex: 1;
+              max-width: 300px;
+              height: 1px;
+              background: ${theme.colors.border};
+            `}
+          />
+          <span
+            css={css`
+              font-weight: ${theme.fontWeight.bold};
+              font-size: 0.9rem;
+              white-space: nowrap;
+              color: ${theme.colors.lightText};
+            `}
+          >
+            Projects
+          </span>
+          <div
+            css={css`
+              flex: 1;
+              max-width: 300px;
+              height: 1px;
+              background: ${theme.colors.border};
+            `}
+          />
+        </div>
 
-  {/* Container for Projects with restricted width and padding */}
-  <div
-    css={css`
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-
-      ${theme.mq[2]} {
-        //768 and below
-        padding: 0 15px;
-      }
-
-      ${theme.mq[3]} {
-        //576 and below
-        padding: 0 10px;
-      }
-    `}
-  >
-    <Projects projects={projects} />
-  </div>
-</div>
+        <div
+          css={css`
+            max-width: 900px;
+            margin: 0 auto;
+          `}
+        >
+          <Projects projects={projects} />
+        </div>
+      </div>
     </div>
   );
 }

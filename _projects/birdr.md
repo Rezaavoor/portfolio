@@ -6,7 +6,7 @@ techStack: "Built in React and Vite
   - Styled with Emotion & Chakra UI
   - State management done by Mobx
   - Authentication done by Firebase
-  - Stroing data in a NoSQL database on Firebase"
+  - Storing data in a NoSQL database on Firebase"
 link: "https://birdr-7cc64.web.app/"
 source: "https://github.com/Rezaavoor/Birdr"
 ---

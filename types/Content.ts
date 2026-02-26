@@ -6,6 +6,7 @@ export default interface ContentType {
     techStack: string;
     link: string;
     source: string;
+    slug: string;
   };
   content: string;
 }
