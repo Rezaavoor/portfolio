@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
-  "homepage": "http://rezahosseini.vercel.app/",
+  "version": "0.67.0",
+  "homepage": "http://rezaa.vercel.app/",
   "private": true,
   "engines": {
     "node": ">=20"
