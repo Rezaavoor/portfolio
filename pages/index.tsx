@@ -119,7 +119,7 @@ export default function Home({ projects }: Props) {
               }
             `}
           >
-            I'm a CS student at KTH from Sweden.
+            Master's student in CS at KTH, specializing in Machine Learning.
           </p>
           <p
             css={css`
@@ -131,11 +131,11 @@ export default function Home({ projects }: Props) {
               }
             `}
           >
-            I build/design websites, apps and a lot more! If you're interested,
-            don't hesitate to contact me :)
+            I build software, work with AI systems, and design web experiences.
+            If you're interested, don't hesitate to reach out :)
           </p>
           <a
-            href="mailto:reza.avoor@gmail.com"
+            href="mailto:reza02hosseini@gmail.com"
             css={css`
               display: inline-block;
               background-color: ${theme.colors.accent};

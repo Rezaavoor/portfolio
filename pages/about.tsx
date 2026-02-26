@@ -86,31 +86,34 @@ export default function About() {
             margin-top: 0;
           `}
         >
-          Hello! My name is Reza Hosseini and I'm a Computer Science student at{" "}
-          <b css={highlight}>KTH University</b> in Sweden.
+          Hello! My name is Reza Hosseini. I'm a{" "}
+          <b css={highlight}>Master's student</b> in Computer Science at{" "}
+          <b css={highlight}>KTH University</b> in Sweden, specializing in
+          Data Science and Machine Learning.
         </p>
         <p>
-          Coding, hacking and programming has always been a passion of mine.
-          Since I was a <b css={highlight}>child</b>, I was always interested in
-          computers and wanted to know how they work.
+          Coding and building things has always been a passion of mine. Since I
+          was a <b css={highlight}>child</b>, I was drawn to computers and
+          wanted to understand how they work. Before college, I was a{" "}
+          <b css={highlight}>self-taught</b> developer, learning through
+          YouTube tutorials, Googling stuff, and scrolling through
+          Stackoverflow (RIP) posts, making sure I do not get down-votes when I ask questions!.
         </p>
         <p>
-          Before I started college, I was a <b css={highlight}>self taught</b>{" "}
-          developer and learned a lot of stuff by just watching YouTube
-          tutorials, Googling stuff, scrolling through Stackoverflow and so on.
-          I learned the basics of web development during that time and built a
-          good and solid knowledge base for my future studies.
+          During <b css={highlight}>high school</b>, I started taking it more
+          seriously and saw it as a potential{" "}
+          <b css={highlight}>career path</b>. I completed my Bachelor's at KTH
+          in 2024 and went straight into my Master's, wanting to learn more about machine learning,
+          deep learning, and AI.
         </p>
         <p>
-          During my <b css={highlight}>high school</b> time between 2018 and
-          2021, I started to take what I like to do more seriously and see it as
-          a potential <b css={highlight}>future career field</b>. At that time I
-          realized this is more than just a hobby and I started to learn more
-          professionally.
+          Along the way, I've worked as a{" "}
+          <b css={highlight}>full-stack developer</b> at a consulting company,
+          led a team of programming teachers, and currently work with AI
+          evaluation systems, RAG, and autonomous agents as an AI software engineer.
         </p>
         <p>
-          If you want to contact me, you are more than welcome to do so by
-          sending me an email at{" "}
+          If you want to get in touch, feel free to send me an email at{" "}
           <a
             href="mailto:reza.avoor@gmail.com"
             css={css`
@@ -122,7 +125,7 @@ export default function About() {
           >
             reza.avoor@gmail.com
           </a>{" "}
-          or messaging me on any of my social media accounts :)
+          or reach out on any of my social media accounts :)
         </p>
       </div>
     </div>
