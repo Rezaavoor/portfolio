@@ -84,6 +84,7 @@ export default function Layout({ children, darkState }: Props) {
             content="Portfolio of Reza Hosseini — CS student at KTH, web developer and designer."
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="color-scheme" content="only light" />
           <meta property="og:title" content="Reza Hosseini — Portfolio" />
           <meta
             property="og:description"
