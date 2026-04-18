@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "0.67.0",
+  "homepage": "http://rezaa.vercel.app/",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "gray-matter": "^4.0.3",
+    "next": "^14.2.35",
+    "nprogress": "^0.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.13.5",
+    "@types/node": "^20.19.34",
+    "@types/nprogress": "^0.2.3",
+    "@types/react": "^18.3.28",
+    "typescript": "^5.9.3"
+  }
+}
